@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background-color: wheat;
+}
+
+body, button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.drawing {
+    margin: auto;
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    display: flex;
+}
+
+.gridbox-line, .gridbox {
+    border: 1px solid rgb(50, 50, 50);;
+    flex: 1;
+}
+
+.gridbox {
+    padding: 50%;
+}
