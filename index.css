@@ -7,6 +7,13 @@ body, button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+button {
+    margin: 2%;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+
 .drawing {
     margin: auto;
     background-color: white;
@@ -16,7 +23,7 @@ body, button {
 }
 
 .gridbox-line, .gridbox {
-    border: 1px solid rgb(50, 50, 50);;
+    border: 0.5px solid rgb(50, 50, 50);
     flex: 1;
 }
 
