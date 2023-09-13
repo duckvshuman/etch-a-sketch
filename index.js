@@ -1,37 +1,32 @@
 const drawing = document.querySelector(".drawing")
 
 
-createGrid(17)
+addBox(16)
 
-function createGrid(boxAmount) {
+function addBox(boxAmount) {
     drawing.replaceChildren()
-    for (let x=0; x < boxAmount; x++) {
-        let gridline = document.createElement('div')
-        gridline.classList.add('gridbox-line')
-    
-        // add box
-        for (let y=0; y < boxAmount; y++) {
-            let gridbox = document.createElement('div')
-            gridbox.classList.add('gridbox')
-            gridbox.addEventListener('mouseover', function (e) {
-                e.target.style.background = 'black'
-            })
-            gridline.appendChild(gridbox)
-        }
-    
-        drawing.appendChild(gridline)
+    for (let i=0; i < boxAmount * boxAmount; i++) {
+        const gridbox = document.createElement('div')
+        gridbox.addEventListener('mouseover', function (e) {
+            e.target.style.background = 'black'
+        })
+        drawing.appendChild(gridbox)
     }
 }
 
+function editGrid(boxAmount) {
+    drawing.setAttribute('style', `grid-template-columns: repeat(${boxAmount}, 2fr); grid-template-rows: repeat(${boxAmount}, 2fr);`)
+    addBox(boxAmount)
+}
+
 function changeSize() {
-    let value = prompt("How many squares do you want?", 16)
+    const value = prompt("How many squares do you want?", 16)
     if (!Number(value)) {
         alert("Input must be a number")
     }
-    else if (value >= 100) {
-        alert("You can't enter 100 or more")
-    } else {
-        
-        createGrid(value)
+    else if (value > 100) {
+        alert("You can't enter more than 100")
+    } else { 
+        editGrid(value)
     }
 }

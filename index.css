@@ -13,7 +13,7 @@ button {
     height: 50px;
     border-radius: 10px;
 }
-
+ 
 footer {
     margin-top: 2%;
 }
@@ -23,14 +23,11 @@ footer {
     background-color: white;
     width: 600px;
     height: 600px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
 }
 
-.gridbox-line, .gridbox {
-    border: 0.5px solid rgb(50, 50, 50);
-    flex: 1;
-}
-
-.gridbox {
-    padding: 50%;
+.drawing > div {
+    border: 0.5px solid black;
 }
