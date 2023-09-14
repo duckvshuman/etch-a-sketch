@@ -60,10 +60,3 @@ function rainbowOrNot(value) {
     }
     
 }
-
-function clear() {
-    const drawingBox = drawing.querySelectorAll('div')
-    for(let i = 0; i<drawingBox.length; i++){
-        drawingBox[i].style.background = "white";
-    }
-}
